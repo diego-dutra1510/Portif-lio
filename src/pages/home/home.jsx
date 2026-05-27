@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { FaDiscord, FaYoutube, FaInstagram } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import "./home.css"
+import "./home.css";
 
 function Home() {
 

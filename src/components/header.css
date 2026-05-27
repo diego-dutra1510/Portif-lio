@@ -109,6 +109,7 @@ header img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    font-family: "PortAstro", sans-serif;
     display: flex;
     gap: 20px;
 }
@@ -163,6 +164,7 @@ header img {
     border: none;
     color: white;
     cursor: pointer;
+    margin-right: 1.5%;
 }
 
 .mobile-menu {
