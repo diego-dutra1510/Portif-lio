@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaDiscord, FaYoutube, FaInstagram } from "react-icons/fa";
-import logo from "../assets/hero.png";
+import logo from "../assets/logo.png";
 import "./footer.css";
 
 function Footer() {

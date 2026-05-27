@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FaHome, FaNewspaper, FaBook } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import "./header.css";
-import logo from "../assets/hero.png";
+import logo from "../assets/logo.png";
 
 function Header() {
     const [menuAberto, setMenuAberto] = useState(false);
@@ -28,7 +28,7 @@ function Header() {
 
             <nav className="nav-center">
                 <Link to="/" className={location.pathname === "/" ? "active" : ""}>
-                    <FaHome style={{ marginRight: "6px" }} /> Home
+                    Home
                 </Link>
             </nav>
 

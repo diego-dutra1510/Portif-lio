@@ -1,17 +1,136 @@
 .container-home {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 0vh;
+    min-height: 150vh;
     overflow: hidden;
-    background-color: rgb(54, 54, 54);
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
     color: white;
-    animation: surgir 1s forwards;
+
+}
+
+
+
+.secao_atuacao {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    min-height: 150vh;
+    z-index: -1;
+    opacity: 0;
+    background: #08080800;
+    animation: surgir 5s forwards;
+    overflow: hidden;
 }
 
 @keyframes surgir {
     to {
-        min-height: 100vh;
+        opacity: 0.6;
     }
+}
+
+.gota {
+    position: absolute;
+    bottom: -100px;
+    border-radius: 50%;
+
+    background: radial-gradient(circle,
+            #c084fc 0%,
+            #9333ea 40%,
+            #581c87 100%);
+
+    /* filter: blur(1px); */
+
+    box-shadow:
+        0 0 10px #9333ea,
+        0 0 25px #7e22ce,
+        0 0 45px #581c87,
+        0 0 80px rgba(147, 51, 234, 0.5);
+}
+
+.atuacao {
+    position: relative;
+
+    margin-top: 5%;
+    margin-left: 2%;
+    font-size: 2.5rem;
+    font-weight: 900;
+    opacity: 0;
+
+    background: linear-gradient(135deg,
+            #e9d5ff 0%,
+            #c084fc 25%,
+            #9333ea 60%,
+            #581c87 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(147, 51, 234, 0.35);
+
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100vw);
+    animation: texto_surgir 1.5s ease-out forwards;
+    transition: 1s;
+    animation-delay: 3s;
+}
+
+.atuacao:hover {
+    text-shadow: 0 0 20px rgba(164, 67, 255, 0.911);
+}
+
+@keyframes texto_surgir {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}
+
+.Objetivos {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.container {
+    width: 30%;
+    min-height: 70%;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+
+    border: solid purple 4px;
+    border-radius: 25px;
+
+    padding: 20px;
+
+    box-shadow: 0px 0px 20px #6e1db6c2;
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .Objetivos {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    .container {
+        width: 95%;
+        min-height: auto;
+        padding: 20px;
+    }
+
 }
