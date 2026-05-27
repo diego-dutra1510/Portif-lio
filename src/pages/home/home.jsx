@@ -57,18 +57,25 @@ function Home() {
 
                 <motion.div
                     className="container"
-                    initial={{ opacity: 0, x: -100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{
-                        duration: 1,
-                        ease: [0.22, 1, 0.36, 1]
+                    initial={{ opacity: 0, x: -100, }}
+                    whileInView={{
+                        opacity: 1, x: 0, transition: {
+                            duration: 1,
+                            delay: 4,
+                            ease: [0.22, 1, 0.36, 1]
+                        }
                     }}
                     whileHover={{
                         y: -8,
-                        scale: 1.02
+                        scale: 1.02,
+                        transition: {
+                            duration: 0.2
+                        }
                     }}
+
                     viewport={{ once: true }}
                 >
+                    <h2 className="title">OBJETIVOS</h2>
                     <p>
                         Tenho aspirações de crescer continuamente no mercado de tecnologia, buscando sempre aprimorar minhas habilidades técnicas e desenvolver soluções inovadoras que possam transformar e otimizar processos. Meu objetivo é contribuir com conhecimento, criatividade e dedicação para impulsionar projetos que façam a diferença no dia a dia das pessoas e das empresas. Quero agregar valor ao mercado de tecnologia por meio da colaboração, aprendizado constante e da aplicação prática de novas tecnologias, promovendo impactos positivos e sustentáveis no setor.
                     </p>
@@ -88,7 +95,7 @@ function Home() {
                     }}
                     viewport={{ once: true }}
                 >
-                    
+
                 </motion.div>
 
             </div>
@@ -125,7 +132,7 @@ function Home() {
             </AnimatePresence> */}
 
 
-        </main>
+        </main >
     );
 }
 

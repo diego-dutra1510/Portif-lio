@@ -85,6 +85,7 @@ header img {
     margin-left: 10px;
     font-size: 1.2rem;
     font-weight: bold;
+    font-family: "PortAstro", sans-serif;
     color: white;
     opacity: 0;
     transform: translateY(10px);
