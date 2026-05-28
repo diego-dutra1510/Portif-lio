@@ -2,14 +2,75 @@
     display: flex;
     flex-direction: column;
     min-height: 150vh;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: 1;
+    overflow-x: hidden;
+    background-color: transparent;
     color: white;
-
+    z-index: 1;
 }
 
+/* CURSOR */
 
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999999;
+
+    box-shadow: 0 0 20px #9333ea, 0 0 40px #581c87;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 25px;
+    padding: 0 1%;
+    align-items: stretch;
+}
+
+/* LADO ESQUERDO */
+
+.left-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* LADO DIREITO */
+
+.right-side {
+    width: 50%;
+    border-radius: 20px;
+    min-height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Card {
+    background-color: #2e2e2e;
+    width: 50%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.Card_header {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    padding: 0px 5%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    gap: 1%;
+    background-color: #181818;
+    align-items: center;
+}
+
+/* FUNDO DAS GOTAS */
 
 .secao_atuacao {
     display: flex;
@@ -18,7 +79,7 @@
     min-height: 150vh;
     z-index: -1;
     opacity: 0;
-    background: #08080800;
+    background: transparent;
     animation: surgir 5s forwards;
     overflow: hidden;
 }
@@ -34,47 +95,39 @@
     bottom: -100px;
     border-radius: 50%;
 
-    background: radial-gradient(circle,
-            #c084fc 0%,
-            #9333ea 40%,
-            #581c87 100%);
+    background: radial-gradient(circle, #c084fc 0%, #9333ea 40%, #581c87 100%);
 
-    /* filter: blur(1px); */
-
-    box-shadow:
-        0 0 10px #9333ea,
-        0 0 25px #7e22ce,
-        0 0 45px #581c87,
-        0 0 80px rgba(147, 51, 234, 0.5);
+    box-shadow: 0 0 10px #9333ea, 0 0 25px #7e22ce, 0 0 45px #581c87, 0 0 80px rgba(147, 51, 234, 0.5);
 }
+
+/* TITULO */
 
 .atuacao {
     position: relative;
 
     margin-top: 5%;
-    margin-left: 2%;
+    width: 100%;
+    padding: 0 1%;
+
     font-size: 2.5rem;
     font-weight: 900;
     font-family: "PortAstro", sans-serif;
-    opacity: 0;
 
-    background: linear-gradient(135deg,
-            #e9d5ff 0%,
-            #c084fc 25%,
-            #9333ea 60%,
-            #581c87 100%);
-
+    background: linear-gradient(135deg, #e9d5ff 0%, #c084fc 25%, #9333ea 60%, #581c87 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
     text-shadow: 0 0 20px rgba(147, 51, 234, 0.35);
 
     opacity: 0;
     filter: blur(10px);
     transform: translateX(-100vw);
+
     animation: texto_surgir 1.5s ease-out forwards;
+
+    animation-delay: 2s;
     transition: 1s;
-    animation-delay: 3s;
 }
 
 .atuacao:hover {
@@ -89,50 +142,108 @@
     }
 }
 
+/* OBJETIVOS */
+
 .Objetivos {
     width: 100%;
-    min-height: 50vh;
+    min-height: 30vh;
     display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 0 20px;
+    padding: 0 1%;
 }
 
 .container {
-    width: 30%;
-    min-height: 70%;
-    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 30%;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
 }
 
-.container:hover, p:hover {
-    text-shadow: 13px 0px 20px #8d03fd;
+/* HOVER */
+.container p:hover {
+    text-shadow:
+        13px 0px 20px #8d03fd;
 }
 
 .title {
     font-family: "PortAstro", sans-serif;
 }
 
+/* =======================
+   TABLET
+======================= */
+
 @media (max-width: 1024px) {
-    .container {
-        width: 50%;
+
+    .atuacao {
+        font-size: 2rem;
+    }
+
+    .content-wrapper {
+        gap: 15px;
     }
 }
 
+/* =======================
+   CELULAR
+======================= */
 
 @media (max-width: 768px) {
 
-    .Objetivos {
+    .content-wrapper {
         flex-direction: column;
-        height: auto;
-        padding: 30px 15px;
+        padding: 0 15px;
+        gap: 30px;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .left-side,
+    .right-side {
+        width: 100%;
+    }
+
+    .atuacao {
+        width: 100%;
+        font-size: 1.8rem;
+        margin-top: 10px;
+    }
+
+    .Objetivos {
+        width: 100%;
     }
 
     .container {
-        width: 95%;
-        min-height: auto;
-        padding: 20px;
+        width: 100%;
     }
 
+    .right-side {
+        height: 30vh;
+        align-items: baseline;
+    }
+
+    .Card {
+        background-color: #2e2e2e;
+        width: 60%;
+        min-height: 100%;
+        border-radius: 25px;
+    }
+
+    .Card_header {
+        display: flex;
+        width: 100%;
+        height: 10%;
+        padding: 0px 5%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        gap: 1%;
+        background-color: #181818;
+        align-items: center;
+    }
 }

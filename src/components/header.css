@@ -34,6 +34,8 @@ header {
         position: absolute;
     }
 
+
+
     .nav-center {
         position: absolute;
         left: 50%;
@@ -47,25 +49,6 @@ header {
 }
 
 
-@media (max-width: 768px) {
-    .logo {
-        margin-left: 1.5%;
-        position: static;
-    }
-
-    .nav-center {
-        display: none;
-    }
-
-    .login {
-        position: absolute;
-        right: 1.5%;
-    }
-
-    .menu-btn {
-        position: relative;
-    }
-}
 
 header.scrolled {
     background-color: #28023a7c;
@@ -266,5 +249,29 @@ header img {
         padding-bottom: 8px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        margin-left: 1.5%;
+        position: static;
+    }
+
+    .logo h1 {
+        font-size: 1.0rem;
+    }
+
+    .nav-center {
+        display: none;
+    }
+
+    .login {
+        position: absolute;
+        right: 1.5%;
+    }
+
+    .menu-btn {
+        position: relative;
     }
 }
