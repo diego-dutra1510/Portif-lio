@@ -1,16 +1,13 @@
-# React + Vite
+🛠️ Tecnologias Utilizadas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este portfólio foi desenvolvido focado em performance, animações fluidas, tipagem/validação de dados robusta e uma experiência de usuário (UX) moderna e futurista.
 
-Currently, two official plugins are available:
+React (Vite): Utilizado como biblioteca base para construção da interface em componentes reaproveitáveis. O Vite foi escolhido como build tool por entregar um ambiente de desenvolvimento ultra-rápido e empacotamento otimizado para produção.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Framer Motion: Responsável por toda a camada de interatividade avançada, incluindo o cursor magnético customizado que segue o usuário e o sistema de partículas reativas (efeito de gotas flutuantes) no background.
 
-## React Compiler
+Zod: Implementado para garantir a integridade dos dados no formulário de contato. Em vez de validações simples com condicionais frágeis, o Zod aplica um schema estrito que valida e limpa os inputs (como regras complexas de extensões de e-mail) em tempo real antes do envio.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+EmailJS: Integração serverless que conecta o formulário de contato diretamente ao provedor de e-mail (Gmail) via API, disparando notificações formatadas em HTML/CSS (Dark Mode) sem a necessidade de expor credenciais ou gerenciar um backend próprio.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React Icons (Tfi Icons): Biblioteca de vetores utilizada para fornecer ícones limpos, consistentes e minimalistas nos campos do formulário e seções do site.
