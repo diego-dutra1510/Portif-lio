@@ -1,0 +1,101 @@
+.contato-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+}
+
+.contato-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.contato-card h1 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.contato-card p {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    color: #9333ea;
+}
+
+.textarea-icon {
+    top: 15px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #9333ea;
+    box-shadow: 0 0 10px rgba(147, 51, 234, 0.2);
+}
+
+.input-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+.btn-enviar {
+    background: #9333ea;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background: #a855f7;
+    transform: translateY(-2px);
+}
+
+.error-msg {
+    color: #ff4d4d;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.success-msg {
+    color: #4df74d;
+    font-weight: bold;
+}

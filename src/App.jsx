@@ -6,6 +6,9 @@ import Footer from './components/footer';
 
 //telas
 import Home from './pages/home/home';
+import Projects from './pages/projetos/projetos';
+import Projects_Info from './pages/projetos/projeto_detalhado';
+import Contato from './pages/contatos/contato';
 
 function App() {
 
@@ -16,6 +19,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/projetos" element={<Projects />} />
+          <Route path="/projeto/:nome" element={<Projects_Info />} />
+          <Route path="/contato" element={<Contato />} />
         </Routes>
       </div>
       <Footer />

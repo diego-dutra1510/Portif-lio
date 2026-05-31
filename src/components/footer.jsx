@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FaDiscord, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaDiscord, FaYoutube, FaInstagram, FaGithub } from "react-icons/fa";
+import { TfiEmail } from "react-icons/tfi";
 import logo from "../assets/logo.png";
 import "./footer.css";
 
@@ -10,13 +11,10 @@ function Footer() {
                 <img src={logo} alt="LOGO" className="footer-logo" />
                 <p>Vivendo e aprendendo nesse ano de {new Date().getFullYear()} </p>
                 <div className="social-icons">
-                    <a href="https://discord.gg/FW9ZGNZNsr" target="_blank">
-                        <FaDiscord className="discord-icon icon" />
+                    <a href="https://github.com/diego-dutra1510" target="_blank">
+                        <FaGithub className="GitHub-icon icon" />
                     </a>
-                    <a href="https://www.youtube.com/@cidadebaixa_roleplay" target="_blank">
-                        <FaYoutube className="youtube-icon icon" />
-                    </a>
-                    <a href="https://www.instagram.com/cidadebaixa_roleplay" target="_blank">
+                    <a href="https://www.instagram.com/diego_dutra_dev?igsh=MWpmaGFxMm96dHphbw==" target="_blank">
                         <FaInstagram className="instagram-icon icon" />
                     </a>
                 </div>

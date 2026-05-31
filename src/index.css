@@ -25,3 +25,25 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #350232;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e100ff;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #690061 #201424;
+}
